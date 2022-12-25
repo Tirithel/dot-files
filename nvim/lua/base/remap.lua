@@ -18,3 +18,8 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "Q", "<nop>")
 
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+
+-- buffers!
+vim.keymap.set("n", "<leader>bn", "<cmd>bnext<CR>")
+vim.keymap.set("n", "<leader>bd", "<cmd>bnext<bar>bd #<CR>")
+vim.keymap.set("n", "<leader>bs", "<cmd>Alpha<CR>")

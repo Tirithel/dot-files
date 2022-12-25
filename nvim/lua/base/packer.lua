@@ -1,4 +1,6 @@
-vim.cmd [[packadd packer.nvim]] return require('packer').startup(function(use)
+vim.cmd [[packadd packer.nvim]] 
+
+return require('packer').startup(function(use)
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
 
@@ -44,12 +46,11 @@ vim.cmd [[packadd packer.nvim]] return require('packer').startup(function(use)
 
 	use {
 		'nvim-lualine/lualine.nvim',
-		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+		requires = { 'nvim-tree/nvim-web-devicons', opt = true }
 	}
 
-	use { 'wellle/context.vim' }
+	use { 'nvim-treesitter/nvim-treesitter-context' }
 
-	-- use { 'SmiteshP/nvim-navic', requires = 'neovim/nvim-lspconfig' }
 	use {
 		"goolord/alpha-nvim",
 		config = function ()
@@ -72,26 +73,26 @@ vim.cmd [[packadd packer.nvim]] return require('packer').startup(function(use)
 				[[    ▀▀ █▪▀▀▀ ▀█▄▀. ▀ ▀▀▀▀  █▪▀▀▀   ]]
 			}
 			dashboard.section.buttons.val = {
-				dashboard.button( "e", "  New file" , ":ene <BAR> startinsert <CR>"),
-				dashboard.button( "q", "  Quit NVIM" , ":qa<CR>"),
+				dashboard.button( "e", "  > New file" , ":ene <BAR> startinsert <CR>"),
+			 	-- dashboard.button( "f", "  > Find file", ":cd $HOME/repos | Telescope find_files<CR>"),
+			 	dashboard.button( "f", "  > Find file", ":Telescope find_files<CR>"),
+			 	dashboard.button( "r", "  > Recent"   , ":Telescope oldfiles<CR>"),
+			 	dashboard.button( "s", "  > Settings" , ":e $MYVIMRC | :cd %:p:h | split . | wincmd k | pwd<CR>"),
+			 	dashboard.button( "q", "  > Quit NVIM" , ":qa<CR>"),
 			}
 			local handle = io.popen('fortune')
 			local fortune = handle:read("*a")
 			handle:close()
 			dashboard.section.footer.val = fortune
-
 			dashboard.config.opts.noautocmd = true
-
 			vim.cmd[[autocmd User AlphaReady echo 'ready']]
-
 			alpha.setup(dashboard.config)
 		end
 	}
 
-	use 'simrat39/rust-tools.nvim'
+	-- use 'simrat39/rust-tools.nvim'
 
 	-- Debugging
-	use 'nvim-lua/plenary.nvim'
 	use 'mfussenegger/nvim-dap'
 
 	use {
@@ -102,4 +103,24 @@ vim.cmd [[packadd packer.nvim]] return require('packer').startup(function(use)
 			require('crates').setup()
 		end,
 	}
+
+	use {
+		"windwp/nvim-autopairs",
+		config = function() require("nvim-autopairs").setup {} end
+	}
+
+	use {
+		"terrortylor/nvim-comment",
+		config = function() require("nvim_comment").setup {} end
+	}
+
+	use {
+		'nvim-tree/nvim-tree.lua',
+		requires = {
+			'nvim-tree/nvim-web-devicons', -- optional, for file icons
+		},
+		tag = 'nightly'
+	}
+
+	use { 'lewis6991/gitsigns.nvim' }
 end)
