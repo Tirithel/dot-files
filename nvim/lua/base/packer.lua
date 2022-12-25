@@ -10,7 +10,7 @@ return require('packer').startup(function(use)
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
-	use { "catppuccin/nvim", as = "catppuccin", config = function() vim.cmd('colorscheme catppuccin') end }
+	use { "catppuccin/nvim", as = 'catppuccin' }
 
 	use { 'nvim-treesitter/nvim-treesitter', as = 'nvim-treesitter', run = ':TSUpdate'}
 
@@ -85,7 +85,7 @@ return require('packer').startup(function(use)
 			handle:close()
 			dashboard.section.footer.val = fortune
 			dashboard.config.opts.noautocmd = true
-			vim.cmd[[autocmd User AlphaReady echo 'ready']]
+			vim.cmd[[autocmd User AlphaReady]]
 			alpha.setup(dashboard.config)
 		end
 	}

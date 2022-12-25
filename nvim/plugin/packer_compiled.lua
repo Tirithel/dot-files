@@ -86,7 +86,6 @@ _G.packer_plugins = {
     url = "https://github.com/goolord/alpha-nvim"
   },
   catppuccin = {
-    config = { "\27LJ\2\n:\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\27colorscheme catppuccin\bcmd\bvim\0" },
     loaded = true,
     path = "/Users/colinmoran/.local/share/nvim/site/pack/packer/start/catppuccin",
     url = "https://github.com/catppuccin/nvim"
@@ -238,18 +237,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: catppuccin
-time([[Config for catppuccin]], true)
-try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\27colorscheme catppuccin\bcmd\bvim\0", "config", "catppuccin")
-time([[Config for catppuccin]], false)
--- Config for: crates.nvim
-time([[Config for crates.nvim]], true)
-try_loadstring("\27LJ\2\n4\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\vcrates\frequire\0", "config", "crates.nvim")
-time([[Config for crates.nvim]], false)
--- Config for: alpha-nvim
-time([[Config for alpha-nvim]], true)
-try_loadstring("\27LJ\2\n�\14\0\0\t\0&\1F6\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0029\2\3\0019\2\4\0025\3\6\0=\3\5\0029\2\3\0019\2\a\0024\3\6\0009\4\b\1'\6\t\0'\a\n\0'\b\v\0B\4\4\2>\4\1\0039\4\b\1'\6\f\0'\a\r\0'\b\14\0B\4\4\2>\4\2\0039\4\b\1'\6\15\0'\a\16\0'\b\17\0B\4\4\2>\4\3\0039\4\b\1'\6\18\0'\a\19\0'\b\20\0B\4\4\2>\4\4\0039\4\b\1'\6\21\0'\a\22\0'\b\23\0B\4\4\0?\4\0\0=\3\5\0026\2\24\0009\2\25\2'\4\26\0B\2\2\2\18\5\2\0009\3\27\2'\6\28\0B\3\3\2\18\6\2\0009\4\29\2B\4\2\0019\4\3\0019\4\30\4=\3\5\0049\4\31\0019\4 \4+\5\2\0=\5!\0046\4\"\0009\4#\4'\6$\0B\4\2\0019\4%\0009\6\31\1B\4\2\1K\0\1\0\nsetup)autocmd User AlphaReady echo 'ready'\bcmd\bvim\14noautocmd\topts\vconfig\vfooter\nclose\a*a\tread\ffortune\npopen\aio\f:qa<CR>\21  > Quit NVIM\6q;:e $MYVIMRC | :cd %:p:h | split . | wincmd k | pwd<CR>\20  > Settings\6s\28:Telescope oldfiles<CR>\18  > Recent\6r\30:Telescope find_files<CR>\21  > Find file\6f :ene <BAR> startinsert <CR>\20  > New file\6e\vbutton\fbuttons\1\15\0\0L   ⣴⣶⣤⡤⠦⣤⣀⣤⠆     ⣈⣭⣭⣿⣶⣿⣦⣼⣆         X    ⠉⠻⢿⣿⠿⣿⣿⣶⣦⠤⠄⡠⢾⣿⣿⡿⠋⠉⠉⠻⣿⣿⡛⣦       J      ⠈   ⠈⢿⣿⣟⠦⠄⣾⣿⣿⣷    ⠻⠿⢿⣿⣧⣄     P           ⣸⣿⣿⢧⠄⢻⠻⣿⣿⣷⣄⣀⠄⠢⣀⡀⠈⠙⠿⠄    T   ⢀      ⢠⣿⣿⣿⠈⠄ ⠡⠌⣻⣿⣿⣿⣿⣿⣿⣿⣛⣳⣤⣀⣀   `   ⢠⣧⣶⣥⡤⢄⠄⣸⣿⣿⠘⠄ ⢀⣴⣿⣿⡿⠛⣿⣿⣧⠈⢿⠿⠟⠛⠻⠿   \\  ⣰⣿⣿⠛⠻⣿⣿⡦⢹⣿⣷⠄ ⠄⢊⣿⣿⡏  ⢸⣿⣿⡇⠄⢀⣠⣄⣾    f ⣠⣿⠿⠛⠄⢀⣿⣿⣷⠘⢿⣿⣦⡀⠄⢸⢿⣿⣿⣄ ⣸⣿⣿⡇⣪⣿⡿⠿⣿⣷⡄  ` ⠙⠃   ⣼⣿⡟⠌ ⠈⠻⣿⣿⣦⣌⡇⠻⣿⣿⣷⣿⣿⣿⠐⣿⣿⡇ ⠛⠻⢷⣄ U     ▐⢻▄▄▄▄ .⠈⠻⣿⣿ ▌⣷▐▪⣿•⣿▌⠄▄⢿·.   ⠁Z    •█▌▐▀▄.▀▪⣶⣾⣿⣿▪█·███·██ ▐███▪   ]    ▐█▐▐▐▀▀▪▄▄█▀▄▐█▐█▐█▐█ ▌▐▌▐█·   \\    ██▐█▐█▄▄▐█▌.▐▌███▐███ ██▌▐█▌   R    ▀▀ █▪▀▀▀ ▀█▄▀. ▀ ▀▀▀▀  █▪▀▀▀   \bval\vheader\fsection\27alpha.themes.dashboard\nalpha\frequire\v����\4\0", "config", "alpha-nvim")
-time([[Config for alpha-nvim]], false)
 -- Config for: nvim-comment
 time([[Config for nvim-comment]], true)
 try_loadstring("\27LJ\2\n>\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\17nvim_comment\frequire\0", "config", "nvim-comment")
@@ -258,6 +245,14 @@ time([[Config for nvim-comment]], false)
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
 time([[Config for nvim-autopairs]], false)
+-- Config for: crates.nvim
+time([[Config for crates.nvim]], true)
+try_loadstring("\27LJ\2\n4\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\vcrates\frequire\0", "config", "crates.nvim")
+time([[Config for crates.nvim]], false)
+-- Config for: alpha-nvim
+time([[Config for alpha-nvim]], true)
+try_loadstring("\27LJ\2\n�\14\0\0\t\0&\1F6\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0029\2\3\0019\2\4\0025\3\6\0=\3\5\0029\2\3\0019\2\a\0024\3\6\0009\4\b\1'\6\t\0'\a\n\0'\b\v\0B\4\4\2>\4\1\0039\4\b\1'\6\f\0'\a\r\0'\b\14\0B\4\4\2>\4\2\0039\4\b\1'\6\15\0'\a\16\0'\b\17\0B\4\4\2>\4\3\0039\4\b\1'\6\18\0'\a\19\0'\b\20\0B\4\4\2>\4\4\0039\4\b\1'\6\21\0'\a\22\0'\b\23\0B\4\4\0?\4\0\0=\3\5\0026\2\24\0009\2\25\2'\4\26\0B\2\2\2\18\5\2\0009\3\27\2'\6\28\0B\3\3\2\18\6\2\0009\4\29\2B\4\2\0019\4\3\0019\4\30\4=\3\5\0049\4\31\0019\4 \4+\5\2\0=\5!\0046\4\"\0009\4#\4'\6$\0B\4\2\0019\4%\0009\6\31\1B\4\2\1K\0\1\0\nsetup)autocmd User AlphaReady echo 'ready'\bcmd\bvim\14noautocmd\topts\vconfig\vfooter\nclose\a*a\tread\ffortune\npopen\aio\f:qa<CR>\21  > Quit NVIM\6q;:e $MYVIMRC | :cd %:p:h | split . | wincmd k | pwd<CR>\20  > Settings\6s\28:Telescope oldfiles<CR>\18  > Recent\6r\30:Telescope find_files<CR>\21  > Find file\6f :ene <BAR> startinsert <CR>\20  > New file\6e\vbutton\fbuttons\1\15\0\0L   ⣴⣶⣤⡤⠦⣤⣀⣤⠆     ⣈⣭⣭⣿⣶⣿⣦⣼⣆         X    ⠉⠻⢿⣿⠿⣿⣿⣶⣦⠤⠄⡠⢾⣿⣿⡿⠋⠉⠉⠻⣿⣿⡛⣦       J      ⠈   ⠈⢿⣿⣟⠦⠄⣾⣿⣿⣷    ⠻⠿⢿⣿⣧⣄     P           ⣸⣿⣿⢧⠄⢻⠻⣿⣿⣷⣄⣀⠄⠢⣀⡀⠈⠙⠿⠄    T   ⢀      ⢠⣿⣿⣿⠈⠄ ⠡⠌⣻⣿⣿⣿⣿⣿⣿⣿⣛⣳⣤⣀⣀   `   ⢠⣧⣶⣥⡤⢄⠄⣸⣿⣿⠘⠄ ⢀⣴⣿⣿⡿⠛⣿⣿⣧⠈⢿⠿⠟⠛⠻⠿   \\  ⣰⣿⣿⠛⠻⣿⣿⡦⢹⣿⣷⠄ ⠄⢊⣿⣿⡏  ⢸⣿⣿⡇⠄⢀⣠⣄⣾    f ⣠⣿⠿⠛⠄⢀⣿⣿⣷⠘⢿⣿⣦⡀⠄⢸⢿⣿⣿⣄ ⣸⣿⣿⡇⣪⣿⡿⠿⣿⣷⡄  ` ⠙⠃   ⣼⣿⡟⠌ ⠈⠻⣿⣿⣦⣌⡇⠻⣿⣿⣷⣿⣿⣿⠐⣿⣿⡇ ⠛⠻⢷⣄ U     ▐⢻▄▄▄▄ .⠈⠻⣿⣿ ▌⣷▐▪⣿•⣿▌⠄▄⢿·.   ⠁Z    •█▌▐▀▄.▀▪⣶⣾⣿⣿▪█·███·██ ▐███▪   ]    ▐█▐▐▐▀▀▪▄▄█▀▄▐█▐█▐█▐█ ▌▐▌▐█·   \\    ██▐█▐█▄▄▐█▌.▐▌███▐███ ██▌▐█▌   R    ▀▀ █▪▀▀▀ ▀█▄▀. ▀ ▀▀▀▀  █▪▀▀▀   \bval\vheader\fsection\27alpha.themes.dashboard\nalpha\frequire\v����\4\0", "config", "alpha-nvim")
+time([[Config for alpha-nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
